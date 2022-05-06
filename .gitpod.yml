@@ -1,0 +1,31 @@
+tasks:
+  - init: |
+      # install operating system dependencies
+      sudo apt-get install libasound2-dev libcups2-dev libx11-dev libxext-dev libxrender-dev libxrandr-dev libxtst-dev libxt-dev
+
+      # unset variable set by gitpod otherwise cannot bootstrap openjdk
+      unset JAVA_TOOL_OPTIONS
+
+      # install a version of the SDK which can be used to bootstrap openjdk
+      sdk install 18-amzn
+
+      # bootstrap configuration
+      bash configure
+
+      # compile
+      make
+  - command: |
+      # install operating system dependencies
+      sudo apt-get install libasound2-dev libcups2-dev libx11-dev libxext-dev libxrender-dev libxrandr-dev libxtst-dev libxt-dev
+
+      # unset variable set by gitpod otherwise cannot bootstrap openjdk
+      unset JAVA_TOOL_OPTIONS
+
+      # install a version of the SDK which can be used to bootstrap openjdk
+      sdk install 18-amzn
+
+      # bootstrap configuration
+      bash configure
+
+      # compile
+      make
